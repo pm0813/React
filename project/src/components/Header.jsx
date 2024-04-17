@@ -44,7 +44,7 @@ const Header = () => {
           <h1><a href="/">로고</a></h1>
         </div>
         <nav 
-          className={`header__nav ${slideShow ? "show" : "hide"}`}
+          className={`header__nav ${slideShow ? "show" : ""}`}
           role="navigation"
           aria-label="메인 메뉴"
         >
