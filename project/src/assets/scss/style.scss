@@ -1,0 +1,14 @@
+@charset "UTF-8";
+
+// setting
+@import "setting/font";
+@import "setting/vars";
+@import "setting/reset";
+@import "setting/mixin";
+
+// section
+@import "section/header";
+@import "section/banner";
+@import "section/slide";
+@import "section/notice";
+@import "section/footer";
