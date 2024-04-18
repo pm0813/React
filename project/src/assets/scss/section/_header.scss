@@ -117,6 +117,9 @@
   }
 
   .item {
+    @media (max-width: 825px) {
+      display: none;
+    }
     display: inline;
     position: absolute;
     top: 77px;
