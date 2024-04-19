@@ -60,12 +60,13 @@ const Header = () => {
                 <div className="item">
                   <ul className="dropDownMenu">
                     {nav.values.map((value, index) => (
-                      <li key={`${nav.title}-${index}`}>{value}</li>
+                      <li key={index}><a href="/">{value}</a></li>
                     ))}
                   </ul>
                 </div>
               </li>
             ))}
+            <div className="navMenuBg" />
           </ul>
         </nav>
         <div className="icon__menu">
