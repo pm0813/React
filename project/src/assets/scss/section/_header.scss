@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
-
 @keyframes sideBarSlide-fadeIn {
   0% {
     transform: translateX(100%);
@@ -30,9 +28,19 @@
   }
 }
 
+@keyframes navMenuBg-fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
 #header {
   @include position-fixed;
-  z-index: 10000;
+
 }
 
 .header__inner {
@@ -63,9 +71,7 @@
           position: absolute;
           right: 0;
           top: 77px;
-          background-color: rgba(116,99,99,0.1);
-          backdrop-filter: blur(15px);
-          z-index: 10000;
+          background-color: rgba(230,223,218,1);
           min-width: 150px;
           padding: 20px 0;
           
@@ -94,7 +100,7 @@
       display: flex;
       li {
         a {
-          font-family: "Noto Sans KR", sans-serif;
+          font-family: var(--mainKor-font);
           font-size: 19px;
           font-weight: 500;
           padding: 5px 20px 27px 20px;
@@ -138,6 +144,7 @@
         position: relative;
         top: 35px;
         left: 1px;
+        z-index: 9999;
         
         &:hover {
           display: block;
@@ -162,14 +169,15 @@
         &:hover {
           display: block;
         }
+        animation: navMenuBg-fadeIn .4s ease;
         display: none;
         position: absolute;
         top: 77px;
         left: 0;
         width: 100%;
-        height: 110px;
-        background-color: rgba(116,99,99,0.05);
-        z-index: 9999;
+        height: 111px;
+        background-color: rgba(237,230,225,1);
+        z-index: 9998;
       }
     }
   }
