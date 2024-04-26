@@ -1,0 +1,70 @@
+#price {
+  padding-top: 77px;
+}
+
+section {
+  padding: 70px 30px;
+}
+
+.section01 {
+
+  .wrap {
+    display: flex;
+    max-width: 1400px;
+    margin: 0 auto;
+
+    .sec01_l {
+      display: flex;
+      flex-direction: column;
+      min-width: 70%;
+      padding-right: 6rem;
+
+      .sel_type {
+        display: flex;
+        align-items: flex-end;
+        margin-bottom: 2rem;
+
+        .selectbox {
+          max-width: 100%;
+          text-align: left;
+          vertical-align: middle;
+          display: inline;
+          position: relative;
+        }
+
+        h2 {
+          font-size: 40px;
+          font-weight: 800;
+          line-height: 1;
+        }
+      }
+
+      .tab {
+        height: 100%;
+      }
+
+      .tab.price {
+        padding-top: 18px;
+        
+        .flex_tit {
+          display: flex;
+          flex-direction: row;
+          align-items: flex-end;
+          margin-bottom: 0;
+          justify-content: space-between;
+
+          .price_legend {
+            font-family: var(--mainKor-font);
+            font-size: 14px;
+            line-height: 1;
+            color: #545454;
+            margin-left: auto;
+            display: flex;
+            align-items: center;
+            column-gap: clamp(10px, 1vw, 12px);
+          }
+        }
+      }
+    }
+  }
+}

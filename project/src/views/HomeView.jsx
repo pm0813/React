@@ -1,9 +1,10 @@
 import React from "react";
 import Header from "../components/Header";
 import Main from "../components/Main";
-import Banner from "../components/Banner";
-import Slide from "../components/Slide";
-import Notice from "../components/Notice";
+import Price from "../components/Price";
+import Shortcut from "../components/Shortcut";
+import Recommend from "../components/Recommend";
+import Community from "../components/Community";
 import Footer from "../components/Footer";
 
 
@@ -12,9 +13,10 @@ const HomeView = () => {
     <>
       <Header />
       <Main>
-        <Banner />
-        <Slide />
-        <Notice />
+        <Price />
+        <Shortcut />
+        <Recommend />
+        <Community />
       </Main>
       <Footer />
     </>

@@ -5,29 +5,20 @@ import { IoPersonOutline } from "react-icons/io5";
 import { IoClose } from "react-icons/io5";
 
 const headerNav = [
+
   {
-    title: "소개",
-    url: "/",
-    values: ["소개"]
-  },
-  {
-    title: "도매가",
-    url: "/",
+    title: "가격 정보",
+    url: "#price",
     values: ["표","그래프"]
   },
   {
     title: "메뉴 추천",
-    url: "/",
+    url: "#recommend",
     values: ["메뉴 추천"]
   },
   {
-    title: "마이페이지",
-    url: "/",
-    values: ["회원정보수정","문의내역확인"]
-  },
-  {
     title: "커뮤니티",
-    url: "/",
+    url: "#community",
     values: ["자유게시판","문의하기"]
   }
 ];
