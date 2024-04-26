@@ -47,7 +47,7 @@ const Header = () => {
           <ul className="dropDown">
             {headerNav.map((nav, key) => (
               <li key={key}>
-                <a href="{nav.url}">{nav.title}</a>
+                <a href={nav.url}>{nav.title}</a>
                 <div className="item">
                   <ul className="dropDownMenu">
                     {nav.values.map((value, index) => (
