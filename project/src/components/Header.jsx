@@ -17,7 +17,7 @@ const headerNav = [
     values: ["메뉴 추천"]
   },
   {
-    title: "자유게시판",
+    title: "게시판",
     url: "#community",
     values: ["자유게시판","문의하기"]
   }
