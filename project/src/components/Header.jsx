@@ -7,7 +7,7 @@ import { IoClose } from "react-icons/io5";
 const headerNav = [
 
   {
-    title: "해치웠나",
+    title: "가격 정보",
     url: "#price",
     values: ["표","그래프"]
   },
