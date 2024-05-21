@@ -8,18 +8,18 @@ const headerNav = [
 
   {
     title: "가격 정보",
-    url: "#price",
-    values: ["표","그래프"]
+    titleUrl: "#price",
+    sub: [["표", "/Table"],["그래프", "/"]]
   },
   {
     title: "메뉴 추천",
-    url: "#recommend",
-    values: ["메뉴 추천"]
+    titleUrl: "#recommend",
+    sub: [["메뉴 추천", "/"]]
   },
   {
     title: "커뮤니티",
-    url: "#community",
-    values: ["자유게시판","문의하기"]
+    titleUrl: "#community",
+    sub: [["자유게시판", "/"],["문의하기", "/"]]
   }
 ];
 
@@ -47,11 +47,11 @@ const Header = () => {
           <ul className="dropDown">
             {headerNav.map((nav, key) => (
               <li key={key}>
-                <a href={nav.url}>{nav.title}</a>
+                <a href={nav.titleUrl}>{nav.title}</a>
                 <div className="item">
                   <ul className="dropDownMenu">
-                    {nav.values.map((value, index) => (
-                      <li key={index}><a href="/">{value}</a></li>
+                    {nav.sub.map((value, index) => (
+                      <li key={index}><a href={value[1]}>{value[0]}</a></li>
                     ))}
                   </ul>
                 </div>
