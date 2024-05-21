@@ -1,12 +1,12 @@
 import React from "react";
 
 
-const TableView = () => {
+const GraphView = () => {
   return(
     <>
-
+      
     </>
   );
 };
 
-export default TableView;
+export default GraphView;

@@ -9,17 +9,17 @@ const headerNav = [
   {
     title: "가격 정보",
     titleUrl: "#price",
-    sub: [["표", "/Table"],["그래프", "/"]]
+    sub: [["표", "/Table"],["그래프", "/Graph"]]
   },
   {
     title: "메뉴 추천",
     titleUrl: "#recommend",
-    sub: [["메뉴 추천", "/"]]
+    sub: [["메뉴 추천", "/Recommend"]]
   },
   {
     title: "커뮤니티",
     titleUrl: "#community",
-    sub: [["자유게시판", "/"],["문의하기", "/"]]
+    sub: [["자유게시판", "/Free"]]
   }
 ];
 

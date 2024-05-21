@@ -1,12 +1,12 @@
 import React from "react";
 
 
-const TableView = () => {
+const FreeView = () => {
   return(
     <>
-
+      
     </>
   );
 };
 
-export default TableView;
+export default FreeView;
