@@ -40,14 +40,12 @@
 
 #header {
   @include position-fixed;
-
 }
 
 .header__inner {
   @include flex-between;
   position: relative;
-  background-color: rgba(116,99,99,0.1);
-  backdrop-filter: blur(15px);
+  background-color: rgba(232,224,217,1);
   padding: 1rem;
 
   .header__logo {
