@@ -1,5 +1,10 @@
-import React from "react";
-import i_cal from "../assets/image/i_cal.svg"
+import React, { useState } from "react";
+import DatePicker from 'react-datepicker';
+import 'react-datepicker/dist/react-datepicker.css';
+import { subDays } from "date-fns";
+import { ko } from "date-fns/locale";
+import i_cal from "../assets/image/i_cal.svg";
+
 
 const ItemCategories = [
   {value: "01", name: "식량작물"},
@@ -53,9 +58,8 @@ const SelectBox = (props) => {
 };
 
 const Table = () => {
-  const today = new Date();
-  const startday = `${today.getFullYear()}.${today.getMonth() + 1}.${today.getDate() - 10}`
-  const endday = `${today.getFullYear()}.${today.getMonth() + 1}.${today.getDate()}`
+  const [startDate, setStartDate] = useState(subDays(new Date(), 10));
+  const [endDate, setEndDate] = useState(new Date());
 
   return (
     <div className="wrap">
@@ -70,12 +74,27 @@ const Table = () => {
                 <span className="tit">기간</span>
                 <div className="cal_box daily">
                   <span className="calendar_input">
-                    <input id="startday" name="startday" type="text" value={startday} readOnly="readonly" className="hasDatepicker cursor"/>
+                    <DatePicker
+                    locale={ko}
+                    className="datePicker cursor"
+                    selected={startDate} 
+                    onChange={(date) => setStartDate(date)} 
+                    dateFormat="yyyy.MM.dd"
+                    minDate={new Date('2000-01-01')}
+                    maxDate={new Date()}
+                    />
                     <img className="ui-datepicker-trigger" src={i_cal} alt="달력" title="달력"></img>
                   </span>
                   <span className="gap">~</span>
                   <span className="calendar_input">
-                    <input id="endday" name="endday" type="text" value={endday} readOnly="readonly" className="hasDatepicker cursor"/>
+                    <DatePicker
+                    locale={ko}
+                    className="datePicker cursor"
+                    selected={endDate} 
+                    onChange={(date) => setEndDate(date)} 
+                    dateFormat="yyyy.MM.dd"
+                    maxDate={new Date()}
+                    />
                     <img className="ui-datepicker-trigger" src={i_cal} alt="달력" title="달력"></img>
                   </span>
                 </div>

@@ -3,6 +3,7 @@ input[type="text"]{
   font-family: inherit;
   line-height: inherit;
   transition: 0.1s color, 0.1s border-color;
+  outline: none;
 }
 
 .cursor{
@@ -74,6 +75,11 @@ h2{
             letter-spacing: -0.05rem;
             display: inline-block;
             position: relative;
+            border: 0;
+
+            .react-datepicker-wrapper{
+              padding: 4px 0 0 2px;
+            }
 
             input{
               min-width: auto;
@@ -98,7 +104,6 @@ h2{
               top: 50%;
               transform: translateY(-50%);
               width: clamp(15px, 1.5vw, 20px);
-              background: url(../../image/i_cal.svg) no-repeat 0 50% / auto 100%;
               text-indent: -9999px;
               cursor: pointer;
             }
@@ -108,6 +113,10 @@ h2{
             margin: 0 1.5rem 0 1rem;
           }
         }
+      }
+
+      &>li+li{
+        border-top: 1px dashed #999;
       }
 
       .row{
@@ -121,6 +130,14 @@ h2{
             font-family: var(--mainKor-font);
             font-weight: 500;
           }
+        }
+
+        &:not(:last-child)::after{
+          content: "";
+          width: 1px;
+          height: 30px;
+          margin-left: clamp(10px, 1.5vw, 20px);
+          border-left: 1px dashed #ddd;
         }
 
         .selectbox{
