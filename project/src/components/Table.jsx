@@ -81,7 +81,7 @@ const Table = () => {
                     onChange={(date) => setStartDate(date)} 
                     dateFormat="yyyy.MM.dd"
                     minDate={new Date('2000-01-01')}
-                    maxDate={new Date()}
+                    maxDate={endDate}
                     />
                     <img className="ui-datepicker-trigger" src={i_cal} alt="달력" title="달력"></img>
                   </span>
@@ -93,6 +93,7 @@ const Table = () => {
                     selected={endDate} 
                     onChange={(date) => setEndDate(date)} 
                     dateFormat="yyyy.MM.dd"
+                    minDate={startDate}
                     maxDate={new Date()}
                     />
                     <img className="ui-datepicker-trigger" src={i_cal} alt="달력" title="달력"></img>
