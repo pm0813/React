@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useCallback, useState } from "react";
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
 import { subDays } from "date-fns";
@@ -60,6 +60,12 @@ const SelectBox = (props) => {
 const Table = () => {
   const [startDate, setStartDate] = useState(subDays(new Date(), 10));
   const [endDate, setEndDate] = useState(new Date());
+  const [search, setSearch] = useState('');
+
+  const onChangeSearch = useCallback((s) => {
+    setSearch(s.target.value);
+  }, []);
+  // selectbox state훅 사용해서 바꿔보기
 
   return (
     <div className="wrap">
@@ -137,7 +143,15 @@ const Table = () => {
                 </div>
                 <div className="opt">
                   <span className="tit">품목명</span>
-                  <input type="text" name="search_itemname" id="search_itemname" value="" className="txt" placeholder="품목명 입력" />
+                  <input
+                  type="text"
+                  name="search_itemname"
+                  id="search_itemname"
+                  value={search}
+                  onChange={onChangeSearch}
+                  className="txt"
+                  placeholder="품목명 입력"
+                  />
                 </div>
               </div>
             </li>
