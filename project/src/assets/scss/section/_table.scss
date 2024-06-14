@@ -44,10 +44,20 @@ h2{
         gap: clamp(8px, 1vw, 10px) clamp(20px, 2vw, 30px);
         padding: clamp(12px, 1vw, 15px) 0;
         
-        .tit{
-          display: inline;
-          font-size: clamp(14px, 1.4vw, 18px);
+        .opt{
+          display: flex;
+          align-items: center;
+          column-gap: 1rem;
+          position: relative;
+
+          .tit{
+            min-width: auto;
+            display: inline-block;
+            font-family: var(--mainKor-font);
+            font-size: clamp(13px, 1.3vw, 17px);
+          }
         }
+        
 
         &>.row>.tit{
           @media (min-width: 768px){
@@ -140,6 +150,15 @@ h2{
           border-left: 1px dashed #ddd;
         }
 
+        & + .row{
+          flex-wrap: wrap;
+          gap: clamp(8px, 1vw, 10px);
+          .opt:not(:last-child) > *:last-child:not(:first-child){
+            max-width: 170px;
+            margin-right: clamp(10px, 1.5vw, 20px);
+          }
+        }
+
         .selectbox{
           max-width: 100%;
           text-align: left;
@@ -149,8 +168,9 @@ h2{
 
           .selected{
             min-width: 150px;
+            max-width: 170px;
             height: 40px;
-            padding: 0 calc(clamp(14px, 1.5vw, 20px) + 26px) 0 clamp(14px, 1.5vw, 20px);
+            padding: 0 clamp(14px, 1.5vw, 20px) 0 clamp(14px, 1.5vw, 15px);
             border-color: #DCDCDC;
             border-radius: clamp(5px, 1vw, 15px);
             font-size: clamp(13px, 1.3vw, 17px);
@@ -158,6 +178,18 @@ h2{
           }
         }
       }
+    }
+    input[type="text"]{
+      min-width: 100px;
+      max-width: 200px;
+      height: 40px;
+      padding: 0 clamp(14px, 1.5vw, 20px);
+      border: 1px solid;
+      border-color: #DCDCDC;
+      border-radius: clamp(5px, 1vw, 15px);
+      font-size: clamp(13px, 1.3vw, 17px);
+      letter-spacing: -0.05rem;
+      vertical-align: middle;
     }
   }
 }
